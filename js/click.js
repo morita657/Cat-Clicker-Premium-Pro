@@ -55,15 +55,22 @@ var view = {
 
     var li = catlist;
     li.addEventListener('click', (function(numCopy) {
+        var numClicks = 0;
         return function() {
     divImage.setAttribute('src', numCopy);
     divBox.appendChild(divImage);
 //    li.appendChild(divImage);
+            alert(++numClicks);
 };
     })(Url));
   
  }      
     }
-}
+/*
+    document.addEventListener("click", (function(){
+        return function(){
+        };
+    })(), false);
+*/}
 
 octopus.getData();
